@@ -19,7 +19,7 @@ import com.zyyoona7.popup.BasePopup;
  * PopupWindow 中存在 EditText 隐藏键盘方法不起作用，只有 toggle 键盘方法才起作用
  * 注：建议由 EditText 需求的弹窗使用 DialogFragment
  */
-public class CmmtPopup extends BasePopup<CmmtPopup> {
+public class CommentPopup extends BasePopup<CommentPopup> {
 
     private View.OnClickListener mCancelListener;
     private View.OnClickListener mOkListener;
@@ -27,11 +27,11 @@ public class CmmtPopup extends BasePopup<CmmtPopup> {
     AppCompatTextView mOkTv;
     AppCompatEditText mEditText;
 
-    public static CmmtPopup create(Context context) {
-        return new CmmtPopup(context);
+    public static CommentPopup create(Context context) {
+        return new CommentPopup(context);
     }
 
-    public CmmtPopup(Context context) {
+    public CommentPopup(Context context) {
         setContext(context);
     }
 
@@ -47,7 +47,7 @@ public class CmmtPopup extends BasePopup<CmmtPopup> {
     }
 
     @Override
-    protected void initViews(View view, CmmtPopup basePopup) {
+    protected void initViews(View view, CommentPopup basePopup) {
 
         mCancelTv = findViewById(R.id.tv_cancel);
         mOkTv = findViewById(R.id.tv_ok);
@@ -56,17 +56,17 @@ public class CmmtPopup extends BasePopup<CmmtPopup> {
         mOkTv.setOnClickListener(mOkListener);
     }
 
-    public CmmtPopup setOnCancelClickListener(View.OnClickListener listener) {
+    public CommentPopup setOnCancelClickListener(View.OnClickListener listener) {
         mCancelListener = listener;
         return this;
     }
 
-    public CmmtPopup setOnOkClickListener(View.OnClickListener listener) {
+    public CommentPopup setOnOkClickListener(View.OnClickListener listener) {
         mOkListener = listener;
         return this;
     }
 
-    public CmmtPopup showSoftInput() {
+    public CommentPopup showSoftInput() {
         if (mEditText != null) {
             mEditText.post(new Runnable() {
                 @Override
@@ -78,12 +78,12 @@ public class CmmtPopup extends BasePopup<CmmtPopup> {
         return this;
     }
 
-    public CmmtPopup hideSoftInput() {
+    public CommentPopup hideSoftInput() {
         if (mEditText != null) {
             mEditText.post(new Runnable() {
                 @Override
                 public void run() {
-                        KeyboardUtils.hideSoftInput(mEditText);
+//                        KeyboardUtils.hideSoftInput(mEditText);
                 }
             });
         }

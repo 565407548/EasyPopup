@@ -97,7 +97,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     mLastX = event.getRawX();
                     mLastY = event.getRawY();
-                    LogUtils.i("onTouch x=" + mLastX + ",y=" + mLastY);
+//                    LogUtils.i("onTouch x=" + mLastX + ",y=" + mLastY);
                 }
                 return false;
             }
@@ -106,7 +106,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
         mPopAdapter.setOnItemLongClickListener(new BaseQuickAdapter.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(BaseQuickAdapter adapter, View view, int position) {
-                LogUtils.i("onLongClick");
+//                LogUtils.i("onLongClick");
                 // TODO: 2018/5/10 判断屏幕上下左右的边界来选择弹出方向
                 mRvPop.showAtLocation(view, Gravity.NO_GRAVITY, (int) mLastX, (int) mLastY);
                 return true;

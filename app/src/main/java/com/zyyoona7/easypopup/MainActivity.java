@@ -7,6 +7,7 @@ import com.zyyoona7.easypopup.base.BaseActivity;
 import com.zyyoona7.easypopup.basic.BasicActivity;
 import com.zyyoona7.easypopup.easypop.EasyPopActivity;
 import com.zyyoona7.easypopup.easypop.RecyclerViewActivity;
+import com.zyyoona7.easypopup.easypop.VideoAct;
 
 public class MainActivity extends BaseActivity {
 
@@ -17,6 +18,8 @@ public class MainActivity extends BaseActivity {
     private Button mEasyBtn;
 
     private Button mRvBtn;
+
+    private Button mVideoBtn;
 
     @Override
     protected int setLayoutId() {
@@ -30,9 +33,10 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initViews() {
-        mBasicBtn = (Button) findViewById(R.id.btn_basic);
-        mEasyBtn = (Button) findViewById(R.id.btn_easy);
-        mRvBtn = (Button) findViewById(R.id.btn_recycler);
+        mBasicBtn =  findViewById(R.id.btn_basic);
+        mEasyBtn =  findViewById(R.id.btn_easy);
+        mRvBtn =  findViewById(R.id.btn_recycler);
+        mVideoBtn = findViewById(R.id.video_btn);
     }
 
     @Override
@@ -55,6 +59,13 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 goTo(RecyclerViewActivity.class);
+            }
+        });
+
+        mVideoBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTo(VideoAct.class);
             }
         });
     }

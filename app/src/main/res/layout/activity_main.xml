@@ -24,4 +24,9 @@
         android:layout_height="wrap_content"
         android:text="RecyclerView"
         android:id="@+id/btn_recycler"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Viedo Demo"
+        android:id="@+id/video_btn"/>
 </LinearLayout>

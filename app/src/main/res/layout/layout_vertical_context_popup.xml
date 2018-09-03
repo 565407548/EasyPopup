@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/context_popup_ll"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#88FF88"
+    android:divider="@drawable/divider_vertical_bg"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:showDividers="middle" />
